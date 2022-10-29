@@ -14,8 +14,9 @@ jobs:
       - uses: actions/checkout@master
       - name: Install
         run: npm ci
+        
       - name: Update gist
-        run: matchai/waka-box@master
+        uses: matchai/waka-box@master
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIST_ID: a2a8ce303a586aa6c6e131ca93633ad9
